@@ -260,7 +260,7 @@
                 },
                 minecraft: {
                     eggs: {
-                        vanilla: 24
+                        blank: 24
                     },
                     products: {
                         small: "NlN0n9jI-sO6HDEF4U1jA ",
