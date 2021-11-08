@@ -68,7 +68,7 @@
                         </div>
                         <div class="form-group" id="step_2" style="display: none">
                             <h4 class="text-center">Select Service</h4>
-                            <div class="card" style="width: 18rem; display: inline; margin: 1rem;">
+                            <div class="card" style="width: 18rem; display: inline-block; margin: 1rem;">
                                 <img src="https://upload.craftions.net/file/8d0csjnA4l/hosting-server-minecraft.png" class="card-img-top" width="128">
                                 <div class="card-body">
                                     <h5 class="card-title">Minecraft</h5>
@@ -76,7 +76,7 @@
                                     <a href="javascript:selectService(0)" class="btn btn-primary">Select</a>
                                 </div>
                             </div>
-                            <div class="card" style="width: 18rem; display: inline; margin: 1rem;">
+                            <div class="card" style="width: 18rem; display: inline-block; margin: 1rem;">
                                 <img src="https://upload.craftions.net/file/du0VV60JEF/hosting-server-webspace.png" class="card-img-top" width="128">
                                 <div class="card-body">
                                     <h5 class="card-title">Webhosting</h5>
