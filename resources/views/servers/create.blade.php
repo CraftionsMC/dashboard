@@ -344,6 +344,10 @@
             }
 
             function selectVersion(version) {
+                console.log(version)
+                console.log(ids[services[currentService]]);
+                console.log(ids[services[currentService]].eggs);
+                console.log(ids[services[currentService]].eggs[version]);
                 document.getElementById("form-name").value = document.getElementById("name").value;
                 document.getElementById("form-description").value = "";
                 document.getElementById("form-node_id").value = document.getElementById("node_id").value;
