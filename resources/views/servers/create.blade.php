@@ -324,18 +324,20 @@
                 if(currentService === 0){
                     let s = ""
                     Object.keys(versions[services[currentService]]).forEach(x => {
-                        s += `
-                            <div class="card" style="width: 18rem; display: inline-block; margin: 1rem;">
-                                <img src="${versions[services[currentService]][x].image}" class="card-img-top" width="128" height="256">
-                                <div class="card-body">
-                                    <h5 class="card-title">${versions[services[currentService]][x].display}</h5>
-                                    <p class="card-text">
-                                        ${versions[services[currentService]][x].description}
-                                    </p>
-                                    <a href="javascript:selectVersion('${x}')" class="btn btn-primary">Select</a>
+                        if(x !== "image"){
+                           s += `
+                                <div class="card" style="width: 18rem; display: inline-block; margin: 1rem;">
+                                    <img src="${versions[services[currentService]][x].image}" class="card-img-top" width="128" height="256">
+                                    <div class="card-body">
+                                        <h5 class="card-title">${versions[services[currentService]][x].display}</h5>
+                                        <p class="card-text">
+                                            ${versions[services[currentService]][x].description}
+                                        </p>
+                                        <a href="javascript:selectVersion('${x}')" class="btn btn-primary">Select</a>
+                                    </div>
                                 </div>
-                            </div>
-                        `
+                            `
+                        }
                     })
                     document.getElementById("sel_ver_cards").innerHTML = s;
                 }
