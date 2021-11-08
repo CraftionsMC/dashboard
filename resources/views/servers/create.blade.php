@@ -69,11 +69,19 @@
                         <div class="form-group" id="step_2" style="display: none">
                             <h4 class="text-center">Select Service</h4>
                             <div class="card" style="width: 18rem;">
-                                <img src="https://mctzock.de/static/media/minecraft.a9bb9ba9.png" class="card-img-top" width="128">
+                                <img src="https://upload.craftions.net/file/8d0csjnA4l/hosting-server-minecraft.png" class="card-img-top" width="128">
                                 <div class="card-body">
                                     <h5 class="card-title">Minecraft</h5>
                                     <p class="card-text">Host your own Minecraft Server in the Cloud.</p>
                                     <a href="javascript:selectService(0)" class="btn btn-primary">Select</a>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                                <img src="https://upload.craftions.net/file/du0VV60JEF/hosting-server-webspace.png" class="card-img-top" width="128">
+                                <div class="card-body">
+                                    <h5 class="card-title">Webhosting</h5>
+                                    <p class="card-text">Host your own Website in the Cloud.</p>
+                                    <a href="javascript:selectService(1)" class="btn btn-primary">Select</a>
                                 </div>
                             </div>
                         </div>
@@ -117,11 +125,13 @@
             let currentVersion = 0;
 
             const services = [
-                "minecraft"
+                "minecraft",
+                "webspace"
             ]
 
             const versions = {
                 minecraft: {
+                    image: "https://mctzock.de/static/media/minecraft.a9bb9ba9.png",
                     vanilla: {
                         display: "Vanilla",
                         description: "Play Minecraft vanilla!",
@@ -136,6 +146,14 @@
                         display: "Forge",
                         description: "Play Minecraft with mods!",
                         image: "https://files.minecraftforge.net/static/images/logo.svg"
+                    }
+                },
+                webspace: {
+                    image: "https://upload.craftions.net/file/du0VV60JEF/hosting-server-webspace.png",
+                    blank: {
+                        display: "Blank",
+                        description: "Blank Webspace with PHP",
+                        image: "https://upload.craftions.net/file/du0VV60JEF/hosting-server-webspace.png"
                     }
                 }
             }
@@ -178,6 +196,44 @@
                         Backups: 20,
                         prize: 187
                     }
+                },
+                webspace: {
+                    small: {
+                        display: "Small",
+                        CPU: 10,
+                        RAM: 256,
+                        Disk: 512,
+                        Databases: 0,
+                        Backups: 0,
+                        prize: 12
+                    },
+                    medium: {
+                        display: "Medium",
+                        CPU: 20,
+                        RAM: 512,
+                        Disk: 2048,
+                        Databases: 0,
+                        Backups: 1,
+                        prize: 22
+                    },
+                    large: {
+                        display: "Large",
+                        CPU: 20,
+                        RAM: 512,
+                        Disk: 4096,
+                        Databases: 2,
+                        Backups: 4,
+                        prize: 33
+                    },
+                    mega: {
+                        display: "Mega",
+                        CPU: 20,
+                        RAM: 512,
+                        Disk: 8192,
+                        Databases: 2,
+                        Backups: 8,
+                        prize: 51
+                    }
                 }
             }
 
@@ -200,6 +256,17 @@
                         medium: "tqKvbHRtGXGyeF3E3wpUh",
                         large: "FTpULvx3qu0HslkWh4q8i",
                         mega: "knaHw9wdh9psbgyRNIZ_d"
+                    }
+                },
+                minecraft: {
+                    eggs: {
+                        blank: 24
+                    },
+                    products: {
+                        small: "NlN0n9jI-sO6HDEF4U1jA ",
+                        medium: "Nz-kcg_JnbGE4UWo-xBqk",
+                        large: "f0pDmE7FpmJjeQwz56RbK",
+                        mega: "KKFBcDD-xpDChMfkGp376"
                     }
                 }
             }
@@ -228,29 +295,27 @@
             function selectService(id) {
                 currentService = id;
                 nextStep();
-                if(currentService === 0){
-                    let s = ""
-                    Object.keys(resources.minecraft).forEach(x => {
-                        s += `
-                            <div class="card" style="width: 18rem; display: inline-block; margin: 1rem;">
-                                <img src="https://mctzock.de/static/media/minecraft.a9bb9ba9.png" class="card-img-top" width="128">
-                                <div class="card-body">
-                                    <h5 class="card-title">${resources.minecraft[x].display}</h5>
-                                    <ul class="card-text">
-                                        <li>CPU: ${resources.minecraft[x].CPU}%</li>
-                                        <li>RAM: ${resources.minecraft[x].RAM}MB</li>
-                                        <li>Disk: ${resources.minecraft[x].Disk}MB</li>
-                                        <li>Databases: ${resources.minecraft[x].Databases}</li>
-                                        <li>Backups: ${resources.minecraft[x].Backups}</li>
-                                        <li><b>${resources.minecraft[x].prize} Credits/Month</b></li>
-                                    </ul>
-                                    <a href="javascript:selectResource('${x}')" class="btn btn-primary">Select</a>
-                                </div>
+
+                let s = ""
+                Object.keys(resources[services[currentService]]).forEach(x => {
+                    s += `
+                        <div class="card" style="width: 18rem; display: inline-block; margin: 1rem;">
+                            <img src="${versions[services[currentService]].image}" class="card-img-top" width="128">
+                            <div class="card-body">
+                                <h5 class="card-title">${resources[services[currentService]][x].display}</h5>
+                                <ul class="card-text">
+                                    <li>CPU: ${resources[services[currentService]][x].CPU}%</li>
+                                    <li>RAM: ${resources[services[currentService]][x].RAM}MB</li>
+                                    <li>Disk: ${resources[services[currentService]][x].Disk}MB</li>
+                                    <li>Databases: ${resources[services[currentService]][x].Databases}</li>
+                                    <li>Backups: ${resources[services[currentService]][x].Backups}</li>
+                                    <li><b>${resources[services[currentService]][x].prize} Credits/Month</b></li>
+                                </ul>
+                                <a href="javascript:selectResource('${x}')" class="btn btn-primary">Select</a>
                             </div>
-                        `
-                    })
-                    document.getElementById("sel_res_cards").innerHTML = s;
-                }
+                        </div>`
+                })
+                document.getElementById("sel_res_cards").innerHTML = s;
             }
 
             function selectResource(name) {
