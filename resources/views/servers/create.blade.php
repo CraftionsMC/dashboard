@@ -84,6 +84,14 @@
                                     <a href="javascript:selectService(1)" class="btn btn-primary">Select</a>
                                 </div>
                             </div>
+                            <div class="card" style="width: 18rem; display: inline-block; margin: 1rem;">
+                                <img src="https://upload.craftions.net/file/Caao0iaqdM/mysql.png" class="card-img-top" width="128">
+                                <div class="card-body">
+                                    <h5 class="card-title">MySQL</h5>
+                                    <p class="card-text">Host your own MySQL Server in the Cloud.</p>
+                                    <a href="javascript:selectService(2)" class="btn btn-primary">Select</a>
+                                </div>
+                            </div>
                         </div>
                         <div class="form-group" id="step_3" style="display: none">
                             <h4 class="text-center">Select Resources</h4>
@@ -126,7 +134,8 @@
 
             const services = [
                 "minecraft",
-                "webspace"
+                "webspace",
+                "mysql_server"
             ]
 
             const versions = {
@@ -154,6 +163,14 @@
                         display: "Blank",
                         description: "Blank Webspace with PHP",
                         image: "https://upload.craftions.net/file/du0VV60JEF/hosting-server-webspace.png"
+                    }
+                },
+                mysql_server: {
+                    image: "https://upload.craftions.net/file/Caao0iaqdM/mysql.png",
+                    normal: {
+                        display: "Normal",
+                        description: "Normal MariaDB Server",
+                        image: "https://upload.craftions.net/file/Caao0iaqdM/mysql.png"
                     }
                 }
             }
@@ -234,6 +251,35 @@
                         Backups: 8,
                         prize: 51
                     }
+                },
+                mysql_server: {
+                    small: {
+                        display: "Small",
+                        CPU: 20,
+                        RAM: 128,
+                        Disk: 1024,
+                        Databases: 0,
+                        Backups: 8,
+                        prize: 17
+                    },
+                    medium: {
+                        display: "Medium",
+                        CPU: 20,
+                        RAM: 256,
+                        Disk: 4096,
+                        Databases: 0,
+                        Backups: 16,
+                        prize: 35
+                    },
+                    large: {
+                        display: "Large",
+                        CPU: 20,
+                        RAM: 512,
+                        Disk: 8192,
+                        Databases: 2,
+                        Backups: 32,
+                        prize: 62
+                    }
                 }
             }
 
@@ -263,10 +309,20 @@
                         blank: 24
                     },
                     products: {
-                        small: "NlN0n9jI-sO6HDEF4U1jA ",
+                        small: "NlN0n9jI-sO6HDEF4U1jA",
                         medium: "Nz-kcg_JnbGE4UWo-xBqk",
                         large: "f0pDmE7FpmJjeQwz56RbK",
                         mega: "KKFBcDD-xpDChMfkGp376"
+                    }
+                },
+                mysql_server: {
+                    eggs: {
+                        normal: 19
+                    },
+                    products: {
+                        small: "2gEmCIXIFJD5Wd3gFINgm",
+                        medium: "lqYWZmDO4E-U-FXWNTk88",
+                        large: "NThqAWVSWGjdCLcXWc5wd"
                     }
                 }
             }
