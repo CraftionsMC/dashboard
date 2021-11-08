@@ -347,8 +347,8 @@
                 document.getElementById("form-name").value = document.getElementById("name").value;
                 document.getElementById("form-description").value = "";
                 document.getElementById("form-node_id").value = document.getElementById("node_id").value;
-                document.getElementById("form-egg_id").value = ids.minecraft.eggs[version];
-                document.getElementById("form-product_id").value = ids.minecraft.products[currentResource];
+                document.getElementById("form-egg_id").value = ids[services[currentService]].eggs[version];
+                document.getElementById("form-product_id").value = ids[services[currentService]].products[currentResource];
                 submit();
             }
 
