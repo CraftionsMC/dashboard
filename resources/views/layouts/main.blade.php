@@ -316,10 +316,18 @@
         @include('models.redeem_voucher_modal')
     </div>
     <!-- /.content-wrapper -->
-    <footer class="main-footer">
-        <strong>Copyright &copy; 2021-{{date('Y')}} <a href="{{url('/')}}">{{env('APP_NAME' , 'Laravel')}}</a>.</strong>
-        All rights
-        reserved. Powered by <a href="https://controlpanel.gg">ControlPanel</a>. Version <b>{{config('app')['version']}}</b>
+    <footer class="main-footer" style="text-align: center;">
+            Copyright &copy; 2021-{{date('Y')}} <a href="https://craftions.net" target="_blank" rel="noreffer">Craftions</a>.
+            All rights
+            reserved. Powered by <a href="https://controlpanel.gg">ControlPanel</a> modified by <a href="https://mctzock.de" target="_blank" rel="noreffer">Ben Siebert</a>.
+            <br>
+            <div>
+                <a href="https://mctzock.de/legal/imprint" target="_blank" rel="noreferrer">Impressum</a>
+                <em>•</em>
+                <a href="https://mctzock.de/legal/privacy" target="_blank" rel="noreferrer">Datenschutz</a>
+                <em>•</em>
+                <a href="https://mctzock.de/legal/tos" target="_blank" rel="noreferrer">AGB</a>
+            </div>
     </footer>
 
     <!-- Control Sidebar -->
