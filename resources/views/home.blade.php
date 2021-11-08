@@ -156,21 +156,21 @@
                 <!-- /.col -->
 
             </div>
+            <div class="row">
+                            <div class="col-12" style="cursor: pointer" onClick="window.location.assign('/store')">
+                                        <div class="info-box mb-3">
+                                            <span class="info-box-icon bg-success elevation-1">
+                                                <i class="fas fa-plus-square"></i>
+                                                </span>
+                                            <div class="info-box-content">
+                                                <span class="info-box-text">Buy Credits</span>
+                                                <span class="info-box-number">Visit the shop</span>
+                                            </div>
+                                        </div>
+                                </div>
+                        </div>
             <!-- END CUSTOM CONTENT -->
         </div>
-            <div class="row">
-                <div class="col-12" style="cursor: pointer" onClick="window.location.assign('/store')">
-                            <div class="info-box mb-3">
-                                <span class="info-box-icon bg-success elevation-1">
-                                    <i class="fas fa-plus-square"></i>
-                                    </span>
-                                <div class="info-box-content">
-                                    <span class="info-box-text">Buy Credits</span>
-                                    <span class="info-box-number">Visit the shop</span>
-                                </div>
-                            </div>
-                    </div>
-            </div>
     </section>
     <!-- END CONTENT -->
 
