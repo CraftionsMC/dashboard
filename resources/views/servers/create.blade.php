@@ -258,7 +258,7 @@
                         mega: "knaHw9wdh9psbgyRNIZ_d"
                     }
                 },
-                minecraft: {
+                webspace: {
                     eggs: {
                         blank: 24
                     },
