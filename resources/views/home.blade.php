@@ -79,22 +79,22 @@
                         </div>
                     <!-- /.info-box -->
                 @endif
-                <div class="col-12 col-sm-6 col-md-3" style="cursor: pointer" onClick="window.location.assign('/store')">
-                    <div class="info-box mb-3">
-                        <span class="info-box-icon bg-success elevation-1">
-                            <i class="fas fa-plus-square"></i>
-                            </span>
-                        <div class="info-box-content">
-                            <span class="info-box-text">Buy Credits</span>
-                            <span class="info-box-number">Visit the shop</span>
-                        </div>
-                    </div>
-                </div>
                 <!-- /.col -->
 
             </div>
-
-
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-3" style="cursor: pointer" onClick="window.location.assign('/store')">
+                            <div class="info-box mb-3">
+                                <span class="info-box-icon bg-success elevation-1">
+                                    <i class="fas fa-plus-square"></i>
+                                    </span>
+                                <div class="info-box-content">
+                                    <span class="info-box-text">Buy Credits</span>
+                                    <span class="info-box-number">Visit the shop</span>
+                                </div>
+                            </div>
+                    </div>
+            </div>
 
 
             <div class="row">
