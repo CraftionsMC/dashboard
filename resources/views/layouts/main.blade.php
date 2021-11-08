@@ -325,8 +325,6 @@
                 <a href="https://mctzock.de/legal/imprint" target="_blank" rel="noreferrer">Impressum</a>
                 <em>•</em>
                 <a href="https://mctzock.de/legal/privacy" target="_blank" rel="noreferrer">Datenschutz</a>
-                <em>•</em>
-                <a href="https://mctzock.de/legal/tos" target="_blank" rel="noreferrer">AGB</a>
             </div>
     </footer>
 
