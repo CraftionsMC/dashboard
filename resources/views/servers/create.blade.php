@@ -321,26 +321,23 @@
             function selectResource(name) {
                 currentResource = name;
                 nextStep();
-                if(currentService === 0){
-                    let s = ""
-                    Object.keys(versions[services[currentService]]).forEach(x => {
-                        if(x !== "image"){
-                           s += `
-                                <div class="card" style="width: 18rem; display: inline-block; margin: 1rem;">
-                                    <img src="${versions[services[currentService]][x].image}" class="card-img-top" width="128" height="256">
-                                    <div class="card-body">
-                                        <h5 class="card-title">${versions[services[currentService]][x].display}</h5>
-                                        <p class="card-text">
-                                            ${versions[services[currentService]][x].description}
-                                        </p>
-                                        <a href="javascript:selectVersion('${x}')" class="btn btn-primary">Select</a>
-                                    </div>
+                let s = ""
+                Object.keys(versions[services[currentService]]).forEach(x => {
+                    if(x !== "image"){
+                       s += `
+                            <div class="card" style="width: 18rem; display: inline-block; margin: 1rem;">
+                                <img src="${versions[services[currentService]][x].image}" class="card-img-top" width="128" height="256">
+                                <div class="card-body">
+                                    <h5 class="card-title">${versions[services[currentService]][x].display}</h5>
+                                    <p class="card-text">
+                                        ${versions[services[currentService]][x].description}
+                                    </p>
+                                    <a href="javascript:selectVersion('${x}')" class="btn btn-primary">Select</a>
                                 </div>
-                            `
-                        }
-                    })
-                    document.getElementById("sel_ver_cards").innerHTML = s;
-                }
+                            </div>`
+                    }
+                })
+                document.getElementById("sel_ver_cards").innerHTML = s;
             }
 
             function selectVersion(version) {
