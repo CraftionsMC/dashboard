@@ -169,7 +169,7 @@
                     image: "https://upload.craftions.net/file/Caao0iaqdM/mysql.png",
                     normal: {
                         display: "Normal",
-                        description: "Normal MariaDB Server",
+                        description: "Standard MySQL Server",
                         image: "https://upload.craftions.net/file/Caao0iaqdM/mysql.png"
                     }
                 }
@@ -317,7 +317,7 @@
                 },
                 mysql_managed: {
                     eggs: {
-                        normal: 19
+                        normal: 26
                     },
                     products: {
                         small: "q-dKbTeX-hUY4yeh-Beoq",
