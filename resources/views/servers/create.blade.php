@@ -88,7 +88,7 @@
                                 <img src="https://upload.craftions.net/file/Caao0iaqdM/mysql.png" class="card-img-top" width="128">
                                 <div class="card-body">
                                     <h5 class="card-title">MySQL</h5>
-                                    <p class="card-text">Host your own MySQL Server in the Cloud.</p>
+                                    <p class="card-text">Host managed MySQL Databases</p>
                                     <a href="javascript:selectService(2)" class="btn btn-primary">Select</a>
                                 </div>
                             </div>
@@ -135,7 +135,7 @@
             const services = [
                 "minecraft",
                 "webspace",
-                "mysql_server"
+                "mysql_managed"
             ]
 
             const versions = {
@@ -165,7 +165,7 @@
                         image: "https://upload.craftions.net/file/du0VV60JEF/hosting-server-webspace.png"
                     }
                 },
-                mysql_server: {
+                mysql_managed: {
                     image: "https://upload.craftions.net/file/Caao0iaqdM/mysql.png",
                     normal: {
                         display: "Normal",
@@ -252,33 +252,33 @@
                         prize: 51
                     }
                 },
-                mysql_server: {
+                mysql_managed: {
                     small: {
                         display: "Small",
-                        CPU: 20,
-                        RAM: 128,
-                        Disk: 1024,
-                        Databases: 0,
-                        Backups: 8,
+                        CPU: 0,
+                        RAM: 5,
+                        Disk: 5,
+                        Databases: 24,
+                        Backups: 0,
                         prize: 17
                     },
                     medium: {
                         display: "Medium",
-                        CPU: 20,
-                        RAM: 256,
-                        Disk: 4096,
-                        Databases: 0,
-                        Backups: 16,
-                        prize: 35
+                        CPU: 0,
+                        RAM: 5,
+                        Disk: 5,
+                        Databases: 48,
+                        Backups: 0,
+                        prize: 29
                     },
                     large: {
                         display: "Large",
-                        CPU: 20,
-                        RAM: 512,
-                        Disk: 8192,
-                        Databases: 2,
-                        Backups: 32,
-                        prize: 62
+                        CPU: 0,
+                        RAM: 5,
+                        Disk: 5,
+                        Databases: 64,
+                        Backups: 0,
+                        prize: 37
                     }
                 }
             }
@@ -315,14 +315,14 @@
                         mega: "KKFBcDD-xpDChMfkGp376"
                     }
                 },
-                mysql_server: {
+                mysql_managed: {
                     eggs: {
                         normal: 19
                     },
                     products: {
-                        small: "2gEmCIXIFJD5Wd3gFINgm",
-                        medium: "lqYWZmDO4E-U-FXWNTk88",
-                        large: "NThqAWVSWGjdCLcXWc5wd"
+                        small: "q-dKbTeX-hUY4yeh-Beoq",
+                        medium: "__3eRygZurp7PJMrzsJhk",
+                        large: "aNqH0eNja4exuBaqd7fAQ"
                     }
                 }
             }
