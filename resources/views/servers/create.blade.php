@@ -76,6 +76,7 @@
                                     <a href="javascript:selectService(0)" class="btn btn-primary">Select</a>
                                 </div>
                             </div>
+                            <!--
                             <div class="card" style="width: 18rem; display: inline-block; margin: 1rem;">
                                 <img src="https://upload.craftions.net/file/du0VV60JEF/hosting-server-webspace.png" class="card-img-top" width="128">
                                 <div class="card-body">
@@ -84,6 +85,7 @@
                                     <a href="javascript:selectService(1)" class="btn btn-primary">Select</a>
                                 </div>
                             </div>
+                            -->
                         </div>
                         <div class="form-group" id="step_3" style="display: none">
                             <h4 class="text-center">Select Resources</h4>
